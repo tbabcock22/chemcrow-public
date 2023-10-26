@@ -13,7 +13,7 @@ from .prompts import safety_summary_prompt, summary_each_data
 class MoleculeSafety:
 
     def __init__(self, llm: BaseLLM = None):
-        self.clintox = pd.read_csv("https://deepchemdata.s3-us-west-1.amazonaws.com/datasets/clintox.csv.gz")
+        self.clintox = pd.read_csv("https://deepchemdata.s3-us-west-1.amazonaws.com/datasets/clintox.csv.gz",verify=False)
         self.pubchem_data = {}
         self.llm = llm
 
